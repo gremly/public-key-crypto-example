@@ -5,7 +5,7 @@ from django.core.signing import Signer
 
 # Create your models here.
 
-class EncKey(models.Model):
+class PublicKey(models.Model):
     """
     Stores, all public keys and
     assigns as id a pregenerated
@@ -13,12 +13,13 @@ class EncKey(models.Model):
     """
     id = models.CharField(
         max_length=256,
-        primary_key=True
+        primary_key=True,
+        blank=True
     )
     key = models.TextField()
 
 
-@receiver(pre_save, sender=EncKey)
+@receiver(pre_save, sender=PublicKey)
 def create_pk(sender, **kwargs):
     """A signal to generate primary key
     usign signer object from django
