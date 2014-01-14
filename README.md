@@ -134,3 +134,10 @@ La siguiente línea bastará en una terminal para realizar el firmado con la lla
     $ python signtext.py 'Algun texto por firmar usando llave primaria'
 
     jdVenhyMANKmjVoy3OoyQSc6XTCgCuKdI..... <-- Texto firmado digitalmente con privkey.pem.
+
+
+Licencia
+========
+
+Este trabajo es liberado al dominio público bajo la licencia Creative Commons.
+![](https://i.creativecommons.org/l/by/4.0/88x31.png)
