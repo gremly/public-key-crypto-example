@@ -3,6 +3,8 @@ from django.db.models.signals import pre_save
 from django.dispatch import receiver
 from django.core.signing import Signer
 
+from datetime import datetime
+
 # Create your models here.
 
 class PublicKey(models.Model):
@@ -29,7 +31,9 @@ def create_pk(sender, **kwargs):
 
     # Extracting key instance that will be saved
     key_obj = kwargs.get('instance') 
-    signed_id = signer.sign(key_obj.key[:len(key_obj.key)/2])
+    signed_id = signer.sign('%s%s' % 
+            (key_obj.key[:len(key_obj.key)/2],
+            datetime.now().microsecond))
     
     # Splits to obtain only signed hash to be defined
     # as primary key
