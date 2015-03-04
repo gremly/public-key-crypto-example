@@ -139,5 +139,4 @@ La siguiente línea bastará en una terminal para realizar el firmado con la lla
 Licencia
 ========
 
-Este trabajo es liberado al dominio público bajo la licencia Creative Commons.
-![](https://i.creativecommons.org/l/by/4.0/88x31.png)
+Este trabajo es liberado al dominio público bajo la licencia GNU/GPLv3. Ver LICENSE.txt.
